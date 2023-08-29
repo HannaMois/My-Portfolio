@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Header/Header';
 // import Loader from './Loader/Loader';
 
-// const ProjectDetailsPage = lazy(() => import('pages/ProjectDetailsPage'));
 const MyProjects = lazy(() => import('pages/ProjectsPage'));
 const HomePage = lazy(() => import('pages/HomePage'));
 const LoaderPage = lazy(() => import('pages/LoaderPage'));
@@ -20,7 +19,6 @@ export function App() {
           <Route path="/" element={<LoaderPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/projects/:projectId" element={<MyProjects />} />
-          {/* <Route path="/details" element={<ProjectDetailsPage />} /> */}
         </Routes>
       </Suspense>
     </>

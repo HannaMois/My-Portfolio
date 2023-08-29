@@ -34,7 +34,7 @@ const HomePage = () => {
       </div>
       <div>
         <Slider />
-        {/* <Bable /> */}
+        <Bable />
       </div>
     </div>
   );
