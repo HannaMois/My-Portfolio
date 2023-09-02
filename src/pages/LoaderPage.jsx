@@ -1,38 +1,22 @@
 import React, { useState, useEffect } from 'react';
-// import { Navigate } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Navigate } from 'react-router-dom';
 
 import styles from './LoaderPage.module.css';
 
-function Loader() {
+function Activate() {
   const [isActive, setIsActive] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
-  const [count, setCount] = useState(9);
+  const [count, setCount] = useState(5);
   const [panelVisible, setPanelVisible] = useState(false);
   const [coverOpened, setCoverOpened] = useState(false);
-  const [alarmSound, setAlarmSound] = useState(null);
   const [theCount, setTheCount] = useState(null);
-  //   const [toHome, setToHome] = useState(false);
-
-  //   const Redirect = () => {
-  //     if (toHome === true) {
-  //       return <Navigate to="/projects" />;
-  //     }
-  //   };
 
   const toggleActivation = () => {
     if (!isActive) {
       setIsActive(false);
-      setIsMuted(false);
-      setCount(9);
+
+      setCount(5);
       setPanelVisible(true);
       setCoverOpened(false);
-      const alarm = new Audio(
-        'https://cdn.josetxu.com/audio/self-destruct-count.mp3'
-      );
-      alarm.volume = 0.5;
-      setAlarmSound(alarm);
-      alarm.play();
 
       const countInterval = setInterval(() => {
         setCount(prevCount => prevCount - 1);
@@ -40,13 +24,11 @@ function Loader() {
       setTheCount(countInterval);
     } else {
       setIsActive(true);
-      setIsMuted(true);
-      setCount(9);
+
+      setCount(5);
       clearInterval(theCount);
       setPanelVisible(false);
       setCoverOpened(true);
-      alarmSound.pause();
-      alarmSound.currentTime = 9;
     }
   };
 
@@ -57,12 +39,9 @@ function Loader() {
     }
   }, [count, theCount]);
 
-  const toggleMute = () => {
-    setIsMuted(prevMuted => !prevMuted);
-    if (alarmSound) {
-      alarmSound.muted = !alarmSound.muted;
-    }
-  };
+  if (count === 0) {
+    return <Navigate to="/home" />;
+  }
 
   return (
     <div className={styles.container}>
@@ -98,28 +77,13 @@ function Loader() {
         <div id="time" className={count === 0 ? styles.crono : ''}>
           {count.toString().padStart(1, '0')}
         </div>
-        {/* <span id="abort" className={styles.abort} onClick={toggleActivation}>
-         */}
         <NavLink to="/home" id="abort" className={styles.abort}>
           GO TO SITE
         </NavLink>
       </div>
       <div id="turn-off"></div>
-      {/* <div id="closing"></div> */}
-
-      <div
-        id="mute"
-        className={`${styles.mute} ${isMuted ? styles.muted : ''}`}
-        onClick={toggleMute}
-      ></div>
-      <audio id="alarm">
-        <source
-          src="https://cdn.josetxu.com/audio/self-destruct-count.mp3"
-          type="audio/mpeg"
-        />
-      </audio>
     </div>
   );
 }
 
-export default Loader;
+export default Activate;

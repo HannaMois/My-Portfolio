@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* background-color: #151515; */
 }
 
 .base {
@@ -52,6 +51,7 @@
   top: 0.5vmin;
   transition: all 0.25s ease 0s;
 }
+
 :global(#activate).pushed {
   box-shadow: 0 0 20px 10px #ff3c3c, 0 0 100px 50px #ff2828;
   background: #ff0000;
@@ -128,6 +128,7 @@
   transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg)
     rotate3d(1, 0, 0, 90deg);
   box-shadow: 0 0 0 3vmin #af0000;
+  border-radius: 5px;
 }
 
 .warning:before {
@@ -144,7 +145,7 @@
 }
 
 .warning:after {
-  content: 'WARNING';
+  content: 'OPEN THE BOX';
   color: white;
   transform: rotate(90deg);
   float: left;
@@ -158,6 +159,7 @@
   text-align: center;
   padding: 1vmin;
   text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+  border-radius: 5px;
 }
 
 .hinges {
@@ -220,10 +222,11 @@
     rotate3d(1, 0, 0, 90deg) translate(33.5vmin, -2vmin);
   text-align: center;
   width: 49vmin;
+  border-radius: 5px;
 }
 
 :global(#panel):before {
-  content: 'WARNING';
+  content: 'ATTENTION';
   top: 3vmin;
   position: relative;
   font-size: 10vmin;
@@ -286,6 +289,7 @@
   border-radius: 0.25vmin;
   font-weight: bold;
   animation: highlight 1s 0s infinite;
+  text-decoration: none;
 }
 
 :global(#abort):hover {

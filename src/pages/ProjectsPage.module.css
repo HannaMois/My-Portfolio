@@ -1,0 +1,161 @@
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  animation: gradient 9s ease infinite;
+  background-size: 400% 400%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.boxBtn {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  width: 200px;
+  height: 40px;
+  padding: 0.625rem 1.875rem;
+  /* padding: 10px; */
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.button:hover {
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.button:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+  background-color: #005baa;
+  background-image: linear-gradient(45deg, #005baa, #000000);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.boxImg {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.image {
+  border-radius: 10%;
+  border: 2px solid #c2c2c2;
+  width: 0;
+  overflow: hidden;
+  animation: slideIn 2s ease forwards;
+  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
+    3px 3px 5px rgba(71, 69, 69, 0.12);
+  backdrop-filter: blur(25px);
+  margin-top: 50px;
+}
+
+@keyframes slideIn {
+  to {
+    width: 250px;
+  }
+}
+
+.image1 {
+  border-radius: 10px;
+  transform: rotate(20deg);
+  width: 0;
+  overflow: hidden;
+  animation: slideIn 2s ease forwards;
+  border: 2px solid #c2c2c2;
+  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
+    3px 3px 5px rgba(71, 69, 69, 0.12);
+  backdrop-filter: blur(25px);
+}
+
+.image2 {
+  border-radius: 10px;
+  transform: rotate(-20deg);
+  width: 0;
+  overflow: hidden;
+  animation: slideIn 2s ease forwards;
+  border: 2px solid #c2c2c2;
+  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
+    3px 3px 5px rgba(71, 69, 69, 0.12);
+  backdrop-filter: blur(25px);
+}
+
+.description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+}

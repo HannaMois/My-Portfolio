@@ -35,8 +35,12 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/keyboard';
 import 'swiper/css/mousewheel';
 import styles from './Slider.module.css';
+import { FaHandPointRight } from 'react-icons/fa';
+import { BsLinkedin } from 'react-icons/bs';
+import { TbMailForward } from 'react-icons/tb';
+import { PiTelegramLogo } from 'react-icons/pi';
 
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 function Slider() {
   const projectSlides = projects.map(({ id, title, description, image }) => {
@@ -44,22 +48,22 @@ function Slider() {
       <>
         <NavLink key={id} to={`/projects/${id}`} className={styles.link}>
           <SwiperSlide className={styles.swiperSlide}>
-            <img
-              src={image}
-              alt="qwe"
-              width="100%"
-              height="auto"
-              className={styles.img}
-            />
-            <div className={styles.swiperOne}>
-              <div>
-                <h2>{title}</h2>
-                <p>{description}</p>
-                <NavLink key={id} to={`/projects/${id}`}>
-                  See more
-                </NavLink>
-              </div>
+            {/* <div className={styles.swiperOne}> */}
+            <div>
+              <h2>{title}</h2>
+              <img
+                src={image}
+                alt="qwe"
+                width="100%"
+                height="auto"
+                className={styles.image}
+              />
+              {/* <p>{description}</p> */}
+              <NavLink key={id} to={`/projects/${id}`} className={styles.link}>
+                See more
+              </NavLink>
             </div>
+            {/* </div> */}
           </SwiperSlide>
         </NavLink>
       </>
@@ -68,15 +72,51 @@ function Slider() {
 
   return (
     <main>
-      <div>
+      <div className={styles.box}>
         <span>Frontend developer</span>
         <h1>Hanna Moiseienko</h1>
         <hr />
-        <p>about me</p>
+        <p>
+          I'm looking for a Frontend Developer position with the opportunity of
+          career growth and professional development. I want to become a part of
+          a friendly team. I am a cheerful and very responsible person. I easily
+          adapt to any conditions and learn quickly, I have creative and
+          systematic thinking, initiative, attentive to details. I am interested
+          in everything that surrounds me. From myself, I am ready to guarantee
+          a full dedication to work.
+        </p>
+        <div className={styles.social}>
+          <h2>
+            Let's talk <FaHandPointRight />
+          </h2>
+          <a
+            href="mailto: hannamois135@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <TbMailForward size="30px" color="#005baa" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/hanna-moiseienko/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsLinkedin size="30px" color="#005baa" />
+          </a>
+
+          <a
+            href="https://t.me/MoiseienkoHanna"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <PiTelegramLogo size="30px" color="#005baa" />
+          </a>
+        </div>
         <a
           target="_blank"
           rel="noreferrer"
           href="https://drive.google.com/file/d/1xo2qCwIO2J_jzsiay5d2ZgGhaPc1Offq/view?usp=sharing"
+          className={styles.link}
         >
           download resume
         </a>
@@ -86,6 +126,8 @@ function Slider() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={'auto'}
+        speed={1000}
+        // slidesPerGroup={1}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -96,10 +138,12 @@ function Slider() {
         keyboard={{ enabled: true }}
         mousewheel={{ thresholdDelta: 70 }}
         loop={true}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 3000 }}
         pagination={{
+          dynamicBullets: true,
           clickable: true,
           el: '.swiper-pagination',
+          type: 'bullets',
         }}
         breakpoints={{
           640: {
@@ -115,7 +159,7 @@ function Slider() {
             slidesPerView: 3,
           },
         }}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className={styles.swiper}
       >
         {projectSlides}
