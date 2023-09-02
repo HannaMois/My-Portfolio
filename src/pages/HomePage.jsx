@@ -86,11 +86,20 @@ function HomePage() {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://drive.google.com/file/d/1xo2qCwIO2J_jzsiay5d2ZgGhaPc1Offq/view?usp=sharing"
+          href="https://drive.google.com/file/d/1d07NqkH_rhLy0PZGM0oqPp9OYYIIe80v/view?usp=drive_link"
           className={styles.link}
         >
           download resume
         </a>
+
+        {/* <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://drive.google.com/file/d/1xo2qCwIO2J_jzsiay5d2ZgGhaPc1Offq/view?usp=sharing"
+          className={styles.link}
+        >
+          download resume
+        </a> */}
       </div>
       <Swiper
         effect={'coverflow'}
