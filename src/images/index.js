@@ -22,6 +22,29 @@ import film3 from './film3.jpg';
 import film4 from './film4.jpg';
 import film5 from './film5.jpg';
 import film6 from './film6.jpg';
+import shoe1 from './shoe1.jpg';
+import shoe2 from './shoe2.jpg';
+import shoe3 from './shoe3.jpg';
+import shoe4 from './shoe4.jpg';
+import shoe5 from './shoe5.jpg';
+import shoe7 from './shoe7.jpg';
+import weather1 from './weather1.jpg';
+import weather2 from './weather2.jpg';
+import weather3 from './weather3.jpg';
+import weather4 from './weather4.jpg';
+import weather5 from './weather5.jpg';
+import youtube5 from './youtube5.jpg';
+import youtube1 from './youtube1.jpg';
+import youtube2 from './youtube2.jpg';
+import youtube4 from './youtube4.jpg';
+import youtube6 from './youtube6.jpg';
+import youtube7 from './youtube7.jpg';
+import cocktails1 from './cocktails1.jpg';
+import cocktails2 from './cocktails2.jpg';
+import cocktails3 from './cocktails3.jpg';
+import cocktails4 from './cocktails4.jpg';
+import cocktails5 from './cocktails5.jpg';
+import cocktails6 from './cocktails6.jpg';
 
 export {
   SlimMom,
@@ -48,4 +71,27 @@ export {
   slim6,
   slim5,
   slim4,
+  shoe1,
+  shoe2,
+  shoe3,
+  shoe4,
+  shoe5,
+  shoe7,
+  weather1,
+  weather2,
+  weather3,
+  weather4,
+  weather5,
+  youtube1,
+  youtube2,
+  youtube4,
+  youtube5,
+  youtube6,
+  youtube7,
+  cocktails1,
+  cocktails2,
+  cocktails3,
+  cocktails4,
+  cocktails5,
+  cocktails6,
 };

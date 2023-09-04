@@ -62,4 +62,68 @@ export const projects = [
     code: 'https://github.com/HannaMois/films-project',
     website: ' https://hannamois.github.io/films-project/',
   },
+
+  {
+    id: 4,
+    title: 'Shoe-Haven',
+    description:
+      'Shoe haven is a commercial project built using React, Commerce.js and Stripe.js',
+    image: images.shoe7,
+    image1: images.shoe1,
+    image2: images.shoe4,
+    image3: images.shoe3,
+    image4: images.shoe5,
+    image5: images.shoe2,
+
+    code: 'https://github.com/HannaMois/Shoe-Haven',
+    website: ' https://store-zeta.vercel.app/',
+  },
+
+  {
+    id: 5,
+    title: 'Weather',
+    description:
+      'Weather App is a React-based web application that allows users to view detailed weather information for their city. The app uses axios for API requests and includes a background video player. Users can view weather information for up to 5 days in advance and navigate between tabs to access different types of weather data',
+    image: images.weather5,
+    image1: images.weather1,
+    image2: images.weather2,
+    image3: images.weather3,
+    image4: images.weather4,
+    image5: images.weather1,
+
+    code: 'https://github.com/HannaMois/Weather',
+    website: ' https://hannamois.github.io/Weather/',
+  },
+
+  {
+    id: 6,
+    title: 'Clone-Youtube',
+    description:
+      'Youtube clone is a simple web application built using React, @mui/material, axios, react-player, and react-router-dom. It allows users to search for videos and channels on Youtube by title and view the results on the app. The app also allows users to watch videos directly on the app using the React Player component. The interface is simple and intuitive, making it easy for users to navigate and find the content they are looking for on Youtube.',
+    image: images.youtube5,
+    image1: images.youtube7,
+    image2: images.youtube4,
+    image3: images.youtube6,
+    image4: images.youtube2,
+    image5: images.youtube1,
+
+    code: 'https://github.com/HannaMois/Clone-Youtube',
+    website: ' https://hannamois.github.io/Clone-Youtube/',
+  },
+
+  {
+    id: 7,
+    title: 'Cocktails',
+    description:
+      'This project was made using vanilla JavaScript. On this site, you can find your favorite cocktails or ingredients, save them to your favorites, or pick up something new for yourself using a convenient search.',
+    image: images.cocktails1,
+    image1: images.cocktails4,
+    image2: images.cocktails6,
+    image3: images.cocktails2,
+    image4: images.cocktails3,
+    image5: images.cocktails5,
+
+    code: 'https://github.com/HannaMois/Cocktails',
+    website: ' https://hannamois.github.io/Cocktails/',
+  },
 ];

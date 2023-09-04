@@ -120,7 +120,7 @@ function HomePage() {
         loop={true}
         autoplay={{ delay: 3000 }}
         pagination={{
-          dynamicBullets: true,
+          // dynamicBullets: true,
           clickable: true,
           el: '.swiper-pagination',
           type: 'bullets',
@@ -143,9 +143,7 @@ function HomePage() {
         className={styles.swiper}
       >
         {projectSlides}
-        {projectSlides}
-        {projectSlides}
-        {projectSlides}
+
         <div class="swiper-pagination"></div>
       </Swiper>
     </main>

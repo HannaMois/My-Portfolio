@@ -64,9 +64,18 @@ main a {
   text-transform: uppercase;
   color: #717171;
   font-weight: 500;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 50px;
   transition: 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+main a:hover {
+  transform: scale(1.02);
+}
+
+.social a:hover {
+  transform: scale(1.2);
 }
 
 .link {
@@ -92,20 +101,20 @@ main a {
 }
 
 :global(.swiper-pagination-bullet) {
-  background: #005baa;
+  background: #acc2d6;
   width: 1.05rem;
   height: 1.05rem;
   border-radius: 0.5rem;
   opacity: 1;
 }
 
-/* :global(.swiper-pagination-bullet-active) {
-    bottom: 1.25rem !important;
-    width: 1.05rem;
-    height: 1.05rem;
-    border-radius: 0.5rem;
-    background-color: blue;
-  } */
+:global(.swiper-pagination-bullet-active) {
+  bottom: 1.25rem !important;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 0.5rem;
+  background-color: rgb(100, 100, 211);
+}
 
 :global(.swiper-pagination) {
   bottom: 1.25rem !important;
