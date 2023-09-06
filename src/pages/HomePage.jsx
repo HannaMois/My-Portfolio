@@ -18,11 +18,12 @@ import { TbMailForward } from 'react-icons/tb';
 import { PiTelegramLogo } from 'react-icons/pi';
 
 function HomePage() {
-  const projectSlides = projects.map(({ id, title, description, image }) => {
+  const projectSlides = projects.map(({ id, title, image }) => {
     return (
       <>
-        <NavLink key={id} to={`/projects/${id}`} className={styles.link}>
-          <SwiperSlide className={styles.swiperSlide}>
+        {/* <NavLink key={id} to={`/projects/${id}`} className={styles.link}> */}
+        <SwiperSlide className={styles.swiperSlide}>
+          <NavLink key={id} to={`/projects/${id}`}>
             <div>
               <h2>{title}</h2>
               <img
@@ -32,13 +33,18 @@ function HomePage() {
                 height="auto"
                 className={styles.image}
               />
-              {/* <p>{description}</p> */}
-              <NavLink key={id} to={`/projects/${id}`} className={styles.link}>
+
+              <NavLink
+                key={id}
+                to={`/projects/${id}`}
+                className={styles.linkSee}
+              >
                 See more
               </NavLink>
             </div>
-          </SwiperSlide>
-        </NavLink>
+          </NavLink>
+        </SwiperSlide>
+        {/* </NavLink> */}
       </>
     );
   });
@@ -47,7 +53,16 @@ function HomePage() {
     <main>
       <div className={styles.box}>
         <span>Frontend developer</span>
+
         <h1>Hanna Moiseienko</h1>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://drive.google.com/file/d/1d07NqkH_rhLy0PZGM0oqPp9OYYIIe80v/view?usp=drive_link"
+          className={styles.link}
+        >
+          download resume
+        </a>
         <hr />
         <p>
           My main goals are acquiring new skills and professional development. I
@@ -83,19 +98,10 @@ function HomePage() {
             <PiTelegramLogo size="30px" color="#005baa" />
           </a>
         </div>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://drive.google.com/file/d/1d07NqkH_rhLy0PZGM0oqPp9OYYIIe80v/view?usp=drive_link"
-          className={styles.link}
-        >
-          download resume
-        </a>
-
         {/* <a
           target="_blank"
           rel="noreferrer"
-          href="https://drive.google.com/file/d/1xo2qCwIO2J_jzsiay5d2ZgGhaPc1Offq/view?usp=sharing"
+          href="https://drive.google.com/file/d/1d07NqkH_rhLy0PZGM0oqPp9OYYIIe80v/view?usp=drive_link"
           className={styles.link}
         >
           download resume
@@ -126,6 +132,10 @@ function HomePage() {
           type: 'bullets',
         }}
         breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+
           640: {
             slidesPerView: 2,
           },

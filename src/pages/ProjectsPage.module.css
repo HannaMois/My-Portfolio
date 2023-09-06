@@ -1,24 +1,71 @@
 .container {
-  padding: 20px;
+  padding: 15px;
+  width: 90%;
   margin: 0 auto;
   animation: gradient 9s ease infinite;
   background-size: 400% 400%;
   height: 100vh;
-  width: 100vw;
 }
 
 .wrapper {
+  display: block;
   margin: 0 auto;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
   margin-top: 50px;
+}
+
+.boxImg {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+.image {
+  transform: rotate(10deg);
+  border-radius: 10%;
+  border: 2px solid #c2c2c2;
+  width: 0;
+  overflow: hidden;
+  animation: slideIn 2s ease forwards;
+  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
+    3px 3px 5px rgba(71, 69, 69, 0.12);
+  backdrop-filter: blur(25px);
+}
+
+@keyframes slideIn {
+  to {
+    width: 250px;
+  }
+}
+
+.image1 {
+  border-radius: 10px;
+  transform: rotate(10deg);
+  width: 0;
+  overflow: hidden;
+  animation: slideIn 2s ease forwards;
+  border: 2px solid #c2c2c2;
+  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
+    3px 3px 5px rgba(71, 69, 69, 0.12);
+  backdrop-filter: blur(25px);
+}
+
+.image2 {
+  border-radius: 10px;
+  transform: rotate(-10deg);
+  width: 0;
+  overflow: hidden;
+  animation: slideIn 2s ease forwards;
+  border: 2px solid #c2c2c2;
+  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
+    3px 3px 5px rgba(71, 69, 69, 0.12);
+  backdrop-filter: blur(25px);
 }
 
 .boxBtn {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -30,7 +77,6 @@
   width: 200px;
   height: 40px;
   padding: 0.625rem 1.875rem;
-  /* padding: 10px; */
   text-align: center;
   color: #fff;
   text-transform: uppercase;
@@ -76,6 +122,26 @@
   animation: animate 8s linear infinite;
 }
 
+.description {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
 .title {
   margin: 0;
   text-align: center;
@@ -83,7 +149,7 @@
   letter-spacing: 0.8px;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+  font-size: 40px;
   background-color: #005baa;
   background-image: linear-gradient(45deg, #005baa, #000000);
   background-size: 100%;
@@ -94,68 +160,82 @@
   -moz-text-fill-color: transparent;
 }
 
-.boxImg {
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-}
-
-.image {
-  border-radius: 10%;
-  border: 2px solid #c2c2c2;
-  width: 0;
-  overflow: hidden;
-  animation: slideIn 2s ease forwards;
-  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
-    3px 3px 5px rgba(71, 69, 69, 0.12);
-  backdrop-filter: blur(25px);
-  margin-top: 50px;
-}
-
-@keyframes slideIn {
-  to {
-    width: 250px;
+@media screen and (min-width: 480px) {
+  .boxBtn {
+    flex-direction: row;
   }
 }
 
-.image1 {
-  border-radius: 10px;
-  transform: rotate(20deg);
-  width: 0;
-  overflow: hidden;
-  animation: slideIn 2s ease forwards;
-  border: 2px solid #c2c2c2;
-  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
-    3px 3px 5px rgba(71, 69, 69, 0.12);
-  backdrop-filter: blur(25px);
+@media screen and (min-width: 640px) {
+  .boxImg {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 50px;
+  }
 }
 
-.image2 {
-  border-radius: 10px;
-  transform: rotate(-20deg);
-  width: 0;
-  overflow: hidden;
-  animation: slideIn 2s ease forwards;
-  border: 2px solid #c2c2c2;
-  box-shadow: -5px -5px 5px rgba(50, 47, 47, 0.5),
-    3px 3px 5px rgba(71, 69, 69, 0.12);
-  backdrop-filter: blur(25px);
+@media screen and (min-width: 768px) {
+  .boxImg {
+    gap: 70px;
+  }
 }
 
-.description {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
+/* @media screen and (min-width: 1280px) {
+  .boxImg {
+    gap: 300px;
+  }
 
-.text {
-  margin: 0;
-  text-align: center;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  line-height: 30px;
-  font-family: 'Roboto', sans-serif;
+  .description {
+    margin-bottom: 50px;
+  }
+
+  .image {
+    transform: rotate(0deg);
+  }
+
+  .title {
+    font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+  }
+} */
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 20px;
+    width: 100vw;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .boxBtn {
+    gap: 20px;
+  }
+
+  .boxImg {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .image {
+    transform: rotate(0deg);
+  }
+
+  .image1 {
+    transform: rotate(20deg);
+  }
+
+  .image2 {
+    transform: rotate(-20deg);
+  }
+
+  .description {
+    width: 50%;
+  }
 }

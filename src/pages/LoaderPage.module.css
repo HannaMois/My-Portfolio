@@ -243,10 +243,12 @@
   color: #ffffff;
   font-family: Arial, Helvetica, serif;
   width: 90vmin;
+
   box-sizing: border-box;
   font-size: 3.25vmin;
   padding: 1vmin 2vmin;
-  height: 60vmin;
+  height: 70vh;
+  /* height: 60vmin; */
   box-shadow: 0 0 0 100vmin #ff000060, 0 0 0 5vmin #ff000060;
   z-index: 5;
   display: none;
