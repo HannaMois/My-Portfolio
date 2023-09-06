@@ -58,7 +58,7 @@ function HomePage() {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://drive.google.com/file/d/1d07NqkH_rhLy0PZGM0oqPp9OYYIIe80v/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1d07NqkH_rhLy0PZGM0oqPp9OYYIIe80v/view?usp=sharing"
           className={styles.link}
         >
           download resume
