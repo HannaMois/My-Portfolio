@@ -60,6 +60,7 @@ function HomePage() {
           rel="noreferrer"
           // href="https://drive.google.com/file/d/1d07NqkH_rhLy0PZGM0oqPp9OYYIIe80v/view?usp=sharing"
           href="https://drive.google.com/file/d/1OzlFfV37vx7Dt2uLGnPuGauE30T8i5g3/view?usp=sharing"
+          className={styles.link}
         >
           download resume
         </a>
